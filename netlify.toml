@@ -1,0 +1,12 @@
+[build]
+  command = "python manage.py collectstatic --noinput && python manage.py migrate && gunicorn healthstack.wsgi"
+  publish = "staticfiles"
+
+[build.environment]
+  DJANGO_SETTINGS_MODULE = "healthstack.settings"
+  PYTHON_VERSION = "3.12"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

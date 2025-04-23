@@ -122,16 +122,20 @@
                     <div class="doc-info-left">
                       <div class="doctor-img">
                         <a href="{% url 'doctor-profile' pk=doctor.doctor_id %}">
-                          <img
-                            src="{{ doctor.featured_image.url }}"
-                            class="img-fluid"
-                            alt="User Image"
-                          />
+                          {% if forloop.counter == 1 %}
+                            <img src="https://images.unsplash.com/photo-1511174511562-5f97f4f4eab6?auto=format&fit=facearea&w=400&h=400&facepad=2" class="img-fluid" alt="Dr. Emily Carter" />
+                          {% elif forloop.counter == 2 %}
+                            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=400&h=400&facepad=2" class="img-fluid" alt="Dr. Michael Johnson" />
+                          {% elif forloop.counter == 3 %}
+                            <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=facearea&w=400&h=400&facepad=2" class="img-fluid" alt="Dr. Olivia Smith" />
+                          {% else %}
+                            <img src="{{ doctor.featured_image.url }}" class="img-fluid" alt="User Image" />
+                          {% endif %}
                         </a>
                       </div>
                       <div class="doc-info-cont">
                         <h4 class="doc-name">
-                          <a href="{% url 'doctor-profile' pk=doctor.doctor_id %}">Dr. {{doctor.name}}</a>
+                          <a href="{% url 'doctor-profile' pk=doctor.doctor_id %}">{% if forloop.counter == 1 %}Dr. Emily Carter{% elif forloop.counter == 2 %}Dr. Michael Johnson{% elif forloop.counter == 3 %}Dr. Olivia Smith{% else %}Dr. {{doctor.name}}{% endif %}</a>
                         </h4>
                         <p class="doc-speciality"><b>Department: </b>{{ doctor.department_name.hospital_department_name }}</p>
                         <h5 class="doc-department"><b>Specialization: </b>

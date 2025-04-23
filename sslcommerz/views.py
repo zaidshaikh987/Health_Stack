@@ -16,6 +16,7 @@ from django.core.mail import BadHeaderError, send_mail
 from django.template.loader import render_to_string
 from django.http import HttpResponse
 from django.utils.html import strip_tags
+import logging
 
 
 # from .models import Patient, User
@@ -141,9 +142,14 @@ def ssl_payment_request(request, pk, id):
     
     
     response = sslcz.createSession(post_body)  # API response
-    print(response)
+    print('SSLCommerz API response:', response)
 
-    return redirect(response['GatewayPageURL'])
+    gateway_url = response.get('GatewayPageURL')
+    if gateway_url:
+        return redirect(gateway_url)
+    else:
+        logging.error("GatewayPageURL not found in response for appointment payment: %s", response)
+        return HttpResponse(f"Payment gateway error: GatewayPageURL not found in response for appointment payment: {response}", status=500)
 
     # return render(request, 'checkout.html')
 

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthStack System - All Features</title>
+    <link rel="stylesheet" href="/static/HealthStack-System/css/Normal/style.css">
+    <style>
+        body { font-family: Arial, sans-serif; background: #f7f7f7; }
+        .container { max-width: 950px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); padding: 32px; }
+        h1 { text-align: center; margin-bottom: 24px; }
+        h2 { margin-top: 36px; color: #0366d6; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+        .feature-link { display: inline-block; padding: 10px 16px; background: #e9f7fe; border-radius: 8px; color: #0366d6; text-decoration: none; font-size: 1.07em; font-weight: bold; margin-bottom: 6px; transition: background 0.2s; }
+        .feature-link:hover { background: #d0eafd; color: #034a8c; }
+        .note { color: #888; font-size: 0.97em; margin-bottom: 16px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>HealthStack System: All Features</h1>
+    <div class="note">Dynamic URLs (with <code>&lt;int:pk&gt;</code>, etc.) require a valid ID. Replace <code>1</code> with a real value.</div>
+    <h2>Hospital Module <span style="font-size:0.8em;color:#888;">(/hospital/)</span></h2>
+    <ul>
+        <li><a class="feature-link" href="/hospital/">Hospital Home</a></li>
+        <li><a class="feature-link" href="/hospital/search/">Search</a></li>
+        <li><a class="feature-link" href="/hospital/appointments/">Appointments</a></li>
+        <li><a class="feature-link" href="/hospital/patient-dashboard/">Patient Dashboard</a></li>
+        <li><a class="feature-link" href="/hospital/profile-settings/">Profile Settings</a></li>
+        <li><a class="feature-link" href="/hospital/about-us/">About Us</a></li>
+        <li><a class="feature-link" href="/hospital/shop/">Pharmacy Shop</a></li>
+        <li><a class="feature-link" href="/hospital/privacy-policy/">Privacy Policy</a></li>
+        <li><a class="feature-link" href="/hospital/patient-register/">Patient Register</a></li>
+        <li><a class="feature-link" href="/hospital/logout/">Logout</a></li>
+        <li><a class="feature-link" href="/hospital/change-password/1">Change Password (dynamic)</a></li>
+        <li><a class="feature-link" href="/hospital/hospital-profile/1/">Hospital Profile (dynamic)</a></li>
+        <li><a class="feature-link" href="/hospital/view-report/1">View Report (dynamic)</a></li>
+        <li><a class="feature-link" href="/hospital/test-cart/1/">Test Cart (dynamic)</a></li>
+        <li><a class="feature-link" href="/hospital/prescription-view/1">Prescription View (dynamic)</a></li>
+        <li><a class="feature-link" href="/hospital/pres_pdf/1/">Prescription PDF (dynamic)</a></li>
+        <li><a class="feature-link" href="/hospital/test-single/1/">Test Single (dynamic)</a></li>
+        <li><a class="feature-link" href="/hospital/test-remove-cart/1/">Test Remove Cart (dynamic)</a></li>
+        <li><a class="feature-link" href="/hospital/test-add-to-cart/1/2/">Test Add To Cart (dynamic)</a></li>
+    </ul>
+    <h2>Doctor Module <span style="font-size:0.8em;color:#888;">(/doctor/)</span></h2>
+    <ul>
+        <li><a class="feature-link" href="/doctor/">Doctor Login</a></li>
+        <li><a class="feature-link" href="/doctor/doctor-dashboard/">Doctor Dashboard</a></li>
+        <li><a class="feature-link" href="/doctor/doctor-profile/1/">Doctor Profile (dynamic)</a></li>
+        <li><a class="feature-link" href="/doctor/appointments/">Appointments</a></li>
+        <li><a class="feature-link" href="/doctor/doctor-profile-settings/">Profile Settings</a></li>
+        <li><a class="feature-link" href="/doctor/doctor-register/">Register</a></li>
+        <li><a class="feature-link" href="/doctor/my-patients/">My Patients</a></li>
+        <li><a class="feature-link" href="/doctor/booking/1/">Booking (dynamic)</a></li>
+        <li><a class="feature-link" href="/doctor/create-prescription/1/">Create Prescription (dynamic)</a></li>
+        <li><a class="feature-link" href="/doctor/patient-profile/1/">Patient Profile (dynamic)</a></li>
+        <li><a class="feature-link" href="/doctor/pdf/1/">PDF (dynamic)</a></li>
+        <li><a class="feature-link" href="/doctor/doctor-view-prescription/1/">View Prescription (dynamic)</a></li>
+        <li><a class="feature-link" href="/doctor/doctor-view-report/1/">View Report (dynamic)</a></li>
+    </ul>
+    <h2>Hospital Admin Module <span style="font-size:0.8em;color:#888;">(/hospital_admin/)</span></h2>
+    <ul>
+        <li><a class="feature-link" href="/hospital_admin/">Admin Login</a></li>
+        <li><a class="feature-link" href="/hospital_admin/admin-dashboard/">Admin Dashboard</a></li>
+        <li><a class="feature-link" href="/hospital_admin/hospital-list/">Hospital List</a></li>
+        <li><a class="feature-link" href="/hospital_admin/add-hospital/">Add Hospital</a></li>
+        <li><a class="feature-link" href="/hospital_admin/patient-list/">Patient List</a></li>
+        <li><a class="feature-link" href="/hospital_admin/medicine-list/">Medicine List</a></li>
+        <li><a class="feature-link" href="/hospital_admin/add-medicine/">Add Medicine</a></li>
+        <li><a class="feature-link" href="/hospital_admin/edit-medicine/1/">Edit Medicine (dynamic)</a></li>
+        <li><a class="feature-link" href="/hospital_admin/delete-medicine/1/">Delete Medicine (dynamic)</a></li>
+        <li><a class="feature-link" href="/hospital_admin/invoice/">Invoice</a></li>
+        <li><a class="feature-link" href="/hospital_admin/invoice-report/">Invoice Report</a></li>
+    </ul>
+    <h2>Pharmacy Module <span style="font-size:0.8em;color:#888;">(/pharmacy/)</span></h2>
+    <ul>
+        <li><a class="feature-link" href="/pharmacy/shop/">Shop</a></li>
+        <li><a class="feature-link" href="/pharmacy/cart/">Cart</a></li>
+        <li><a class="feature-link" href="/pharmacy/checkout/">Checkout</a></li>
+        <li><a class="feature-link" href="/pharmacy/product-single/1/">Product Single (dynamic)</a></li>
+        <li><a class="feature-link" href="/pharmacy/remove-item/1/">Remove Item (dynamic)</a></li>
+        <li><a class="feature-link" href="/pharmacy/add-to-cart/1">Add to Cart (dynamic)</a></li>
+        <li><a class="feature-link" href="/pharmacy/increase-item/1/">Increase Item (dynamic)</a></li>
+        <li><a class="feature-link" href="/pharmacy/decrease-item/1/">Decrease Item (dynamic)</a></li>
+    </ul>
+    <h2>Chat Module <span style="font-size:0.8em;color:#888;">(/chat/)</span></h2>
+    <ul>
+        <li><a class="feature-link" href="/chat/">Chat Home</a></li>
+        <li><a class="feature-link" href="/chat/profile/">Profile</a></li>
+        <li><a class="feature-link" href="/chat/send/">Send Chat</a></li>
+        <li><a class="feature-link" href="/chat/renew/">Renew Messages</a></li>
+    </ul>
+    <h2>Payments Module <span style="font-size:0.8em;color:#888;">(/sslcommerz/)</span></h2>
+    <ul>
+        <li><a class="feature-link" href="/sslcommerz/">Payment Home</a></li>
+        <li><a class="feature-link" href="/sslcommerz/ssl-payment-request/1/1/">SSL Payment Request (dynamic)</a></li>
+        <li><a class="feature-link" href="/sslcommerz/ssl-payment-success/">Payment Success</a></li>
+        <li><a class="feature-link" href="/sslcommerz/ssl-payment-fail/">Payment Fail</a></li>
+        <li><a class="feature-link" href="/sslcommerz/ssl-payment-cancel/">Payment Cancel</a></li>
+        <li><a class="feature-link" href="/sslcommerz/ssl-payment-request-medicine/1/1/">Payment Request Medicine (dynamic)</a></li>
+        <li><a class="feature-link" href="/sslcommerz/ssl-payment-request-test/1/1/2/">Payment Request Test (dynamic)</a></li>
+        <li><a class="feature-link" href="/sslcommerz/payment-testing/1/">Payment Testing (dynamic)</a></li>
+    </ul>
+    <h2>API Module <span style="font-size:0.8em;color:#888;">(/api/)</span></h2>
+    <ul>
+        <li><a class="feature-link" href="/api/">API Root</a></li>
+        <li><a class="feature-link" href="/api/users/token/">Token Obtain</a></li>
+        <li><a class="feature-link" href="/api/users/token/refresh/">Token Refresh</a></li>
+        <li><a class="feature-link" href="/api/hospital/">Get Hospitals</a></li>
+        <li><a class="feature-link" href="/api/hospital/1/">Get Hospital Profile (dynamic)</a></li>
+    </ul>
+</div>
+</body>
+</html>
